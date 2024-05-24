@@ -61,7 +61,7 @@ export class SettingsTab extends PluginSettingTab {
         // ---------------------------------------------------------------------------
 
         new Setting(containerEl)
-            .setName('Task Format')
+            .setName('Task format')
             .setDesc(
                 SettingsTab.createFragmentWithHTML(
                     '<p>The format that Tasks uses to read and write tasks.</p>' +
@@ -214,7 +214,7 @@ export class SettingsTab extends PluginSettingTab {
             });
 
         new Setting(containerEl)
-            .setName('Use filename as Scheduled date for undated tasks')
+            .setName('Use filename as scheduled date for undated tasks')
             .setDesc(
                 SettingsTab.createFragmentWithHTML(
                     'Save time entering Scheduled (⏳) dates.</br>' +
@@ -233,7 +233,7 @@ export class SettingsTab extends PluginSettingTab {
             });
 
         new Setting(containerEl)
-            .setName('Folders with default Scheduled dates')
+            .setName('Folders with default scheduled dates')
             .setDesc(
                 'Leave empty if you want to use default Scheduled dates everywhere, or enter a comma-separated list of folders.',
             )
@@ -501,7 +501,7 @@ export class SettingsTab extends PluginSettingTab {
 
         /* -------------------- 'Review and check your Statuses' button -------------------- */
         const createMermaidDiagram = new Setting(containerEl).addButton((button) => {
-            const buttonName = 'Review and check your Statuses';
+            const buttonName = 'Review and check your statuses';
             button
                 .setButtonText(buttonName)
                 .setCta()
@@ -558,7 +558,7 @@ export class SettingsTab extends PluginSettingTab {
         /* -------------------- 'Add New Task Status' button -------------------- */
         const setting = new Setting(containerEl).addButton((button) => {
             button
-                .setButtonText('Add New Task Status')
+                .setButtonText('Add new task status')
                 .setCta()
                 .onClick(async () => {
                     StatusSettings.addStatus(
@@ -596,7 +596,7 @@ export class SettingsTab extends PluginSettingTab {
         /* -------------------- 'Add All Unknown Status Types' button -------------------- */
         const addAllUnknownStatuses = new Setting(containerEl).addButton((button) => {
             button
-                .setButtonText('Add All Unknown Status Types')
+                .setButtonText('Add all unknown status types')
                 .setCta()
                 .onClick(async () => {
                     const tasks = this.plugin.getTasks();
@@ -618,7 +618,7 @@ export class SettingsTab extends PluginSettingTab {
         /* -------------------- 'Reset Custom Status Types to Defaults' button -------------------- */
         const clearCustomStatuses = new Setting(containerEl).addButton((button) => {
             button
-                .setButtonText('Reset Custom Status Types to Defaults')
+                .setButtonText('Reset custom status types to defaults')
                 .setWarning()
                 .onClick(async () => {
                     StatusSettings.resetAllCustomStatuses(statusSettings);
