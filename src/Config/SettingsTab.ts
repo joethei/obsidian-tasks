@@ -51,14 +51,13 @@ export class SettingsTab extends PluginSettingTab {
 
         // For reasons I don't understand, 'h2' is tiny in Settings,
         // so I have used 'h3' as the largest heading.
-        containerEl.createEl('h3', { text: 'Tasks Settings' });
         containerEl.createEl('p', {
             cls: 'tasks-setting-important',
             text: 'Changing any settings requires a restart of obsidian.',
         });
 
         // ---------------------------------------------------------------------------
-        containerEl.createEl('h4', { text: 'Task Format Settings' });
+        new Setting(containerEl).setName('Task format').setHeading();
         // ---------------------------------------------------------------------------
 
         new Setting(containerEl)
@@ -82,7 +81,7 @@ export class SettingsTab extends PluginSettingTab {
             });
 
         // ---------------------------------------------------------------------------
-        containerEl.createEl('h4', { text: 'Global filter Settings' });
+        new Setting(containerEl).setName('Global filter').setHeading();
         // ---------------------------------------------------------------------------
 
         new Setting(containerEl)
@@ -126,7 +125,7 @@ export class SettingsTab extends PluginSettingTab {
             });
 
         // ---------------------------------------------------------------------------
-        containerEl.createEl('h4', { text: 'Global Query' });
+        new Setting(containerEl).setName('Global query').setHeading();
         // ---------------------------------------------------------------------------
 
         makeMultilineTextSetting(
@@ -153,7 +152,7 @@ export class SettingsTab extends PluginSettingTab {
         );
 
         // ---------------------------------------------------------------------------
-        containerEl.createEl('h4', { text: 'Task Statuses' });
+        new Setting(containerEl).setName('Task statuses').setHeading();
         // ---------------------------------------------------------------------------
 
         const { headingOpened } = getSettings();
@@ -163,7 +162,7 @@ export class SettingsTab extends PluginSettingTab {
         });
 
         // ---------------------------------------------------------------------------
-        containerEl.createEl('h4', { text: 'Date Settings' });
+        new Setting(containerEl).setName('Date').setHeading();
         // ---------------------------------------------------------------------------
 
         new Setting(containerEl)
@@ -251,7 +250,7 @@ export class SettingsTab extends PluginSettingTab {
             });
 
         // ---------------------------------------------------------------------------
-        containerEl.createEl('h4', { text: 'Recurring task Settings' });
+        new Setting(containerEl).setName('Recurring tasks').setHeading();
         // ---------------------------------------------------------------------------
 
         new Setting(containerEl)
@@ -271,7 +270,7 @@ export class SettingsTab extends PluginSettingTab {
             });
 
         // ---------------------------------------------------------------------------
-        containerEl.createEl('h4', { text: 'Auto-suggest Settings' });
+        new Setting(containerEl).setName('Auto-suggest').setHeading();
         // ---------------------------------------------------------------------------
 
         new Setting(containerEl)
@@ -325,7 +324,7 @@ export class SettingsTab extends PluginSettingTab {
             });
 
         // ---------------------------------------------------------------------------
-        containerEl.createEl('h4', { text: 'Dialog Settings' });
+        new Setting(containerEl).setName('Dialog').setHeading();
         // ---------------------------------------------------------------------------
 
         new Setting(containerEl)
